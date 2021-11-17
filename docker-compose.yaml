@@ -1,0 +1,19 @@
+version: '3'
+services:
+  bananagrupo:
+    image: bananaimagem
+    container_name: bananacontainer
+    build:
+      context: .
+    ports:
+      - "8001:8080"
+    networks:
+      - bananarede
+
+networks:
+  bananarede:
+    driver: bridge
+
+    # docker-compose up -d
+    #mvn install
+    #./mvnw clean package -DskipTests
